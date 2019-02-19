@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 import com.piresalexsandro.workshopmongo.dto.UserDTO;
@@ -39,9 +37,33 @@ public class UserService {
 		repo.deleteById(id);
 	}
 	
-	public User fromDTO(UserDTO objDTO) {
+	public User update(User newUserData) {
+		Optional<User> foundUser = repo.findById(newUserData.getId());
+		return updateData(foundUser, newUserData).orElse(new User());
+	}
+	
+	private Optional<User> updateData(Optional<User> foundUser, User newUserData) {
 		
-		return new User(objDTO.getId(), objDTO.getEmail(), objDTO.getName());
+		/*
+		 * List<String> listOfStrings = new ArrayList<String>(); for (int i = 0; i <
+		 * listOfStrings.size(); i ++) { } listOfStrings.stream() .skip(1) .findFirst()
+		 * .ifPresent(consumer);
+		 */		
+		foundUser.ifPresent((User user) -> {
+			
+			user.setEmail(newUserData.getName());
+			user.setName(newUserData.getName());
+			
+			repo.save(user);
+			
+		});
+		
+		return foundUser;
+		
+	}
+
+	public User fromDTO(UserDTO objDTO) {
+		return new User(objDTO.getId(), objDTO.getName(), objDTO.getEmail());
 	}
 	
 }
