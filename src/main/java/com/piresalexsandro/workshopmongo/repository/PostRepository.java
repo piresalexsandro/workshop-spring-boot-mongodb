@@ -5,11 +5,11 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.piresalexsandro.workshopmongo.resource.User;
+import com.piresalexsandro.workshopmongo.domain.Post;
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String>{
+public interface PostRepository extends MongoRepository<Post, String>{
 
-	User save(Optional<User> newObj);
+	Post save(Optional<Post> newObj);
 
 }
