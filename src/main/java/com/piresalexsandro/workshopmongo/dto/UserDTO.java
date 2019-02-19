@@ -6,7 +6,6 @@ import com.piresalexsandro.workshopmongo.resource.User;
 
 public class UserDTO implements Serializable{
 	
-
 	private static final long serialVersionUID = 1L;
 	
 	private String id;
@@ -45,8 +44,4 @@ public class UserDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
-	
 }
