@@ -59,5 +59,12 @@ public class UserResource {
 		obj = service.update(obj);
 		return ResponseEntity.noContent().build();
 	}
+	
+	// obter somente os posts do usuario
+	@RequestMapping(value = "/{id}/posts", method=RequestMethod.GET)
+	public ResponseEntity<List<Post>> findPost(@PathVariable String id) { //@PathVariable para firmar a amarraçao entre o id da url com o argumento
+		User obj = service.findById(id);
+		return ResponseEntity.ok().body(obj.getPosts());
+	}
 		
 }
