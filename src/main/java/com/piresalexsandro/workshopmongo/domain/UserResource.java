@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.piresalexsandro.workshopmongo.dto.UserDTO;
+import com.piresalexsandro.workshopmongo.resource.Post;
 import com.piresalexsandro.workshopmongo.resource.User;
 import com.piresalexsandro.workshopmongo.services.UserService;
 

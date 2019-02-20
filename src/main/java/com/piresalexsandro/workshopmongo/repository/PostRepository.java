@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.piresalexsandro.workshopmongo.domain.Post;
+import com.piresalexsandro.workshopmongo.resource.Post;
 
 @Repository
 public interface PostRepository extends MongoRepository<Post, String>{

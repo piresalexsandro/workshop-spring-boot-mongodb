@@ -1,4 +1,4 @@
-package com.piresalexsandro.workshopmongo.domain;
+package com.piresalexsandro.workshopmongo.resource;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.piresalexsandro.workshopmongo.dto.AuthorDTO;
-import com.piresalexsandro.workshopmongo.resource.User;
 
 @Document
 public class Post implements Serializable{

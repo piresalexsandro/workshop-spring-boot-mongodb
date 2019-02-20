@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import com.piresalexsandro.workshopmongo.domain.Post;
 import com.piresalexsandro.workshopmongo.dto.AuthorDTO;
 import com.piresalexsandro.workshopmongo.repository.PostRepository;
 import com.piresalexsandro.workshopmongo.repository.UserRepository;
+import com.piresalexsandro.workshopmongo.resource.Post;
 import com.piresalexsandro.workshopmongo.resource.User;
 
 @Configuration

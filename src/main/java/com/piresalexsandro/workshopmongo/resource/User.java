@@ -8,8 +8,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.piresalexsandro.workshopmongo.domain.Post;
-
 @Document
 //@Document(Collection="user"
 public class User implements Serializable {
